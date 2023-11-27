@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 해당 페이지의 스타일과 스크립트를 포함 -->
+    <link rel="stylesheet" href="login.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!--<script src="function.js"></script>-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,500,700&display=swap">
+    <style>
+        /* 스타일을 여기에 추가 */
+        /* 예: .login-form { display: none; } */
+    </style>
+    <!-- ... (다른 메타태그 및 스타일 등) ... -->
+</head>
+
+<body>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <form name="login" class="login-form">
+        <h1>로그인</h1>
+        <div class="int-area">
+            <input type="text" name="id" id="id" autocomplete="off" required>
+            <label for="id">USER NAME</label>
+        </div>
+        <div class="int-area">
+            <input type="password" name="pw" id="pw" autocomplete="off" required>
+            <label for="pw">PASSWORD</label>
+        </div>
+        <div class="btn-area">
+            <button type="button" id="btn">LOGIN</button>
+        </div>
+    </form>
+
+    <script>
+        let id = $('#id');
+        let pw = $('#pw');
+        let btn = $('#btn');
+
+        $(btn).on('click', function () {
+            if ($(id).val() == "") {
+                $(id).next('label').addClass('warning');
+                setTimeout(function () {
+                    $('label').removeClass('warning');
+                }, 1500);
+            } else if ($(pw).val() == "") {
+                $(pw).next('label').addClass('warning');
+                setTimeout(function () {
+                    $('label').removeClass('warning');
+                }, 1500);
+            }
+        });
+    </script>
+
+    <script src="function.js"></script>
+</body>
+
+</html>

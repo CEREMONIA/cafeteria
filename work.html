@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="style..css" />
+  <script src="function.js"></script>
+  <link rel="stylesheet" href="style.css" />
+    <script src="function.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,500,700&display=swap">
+  <title>오늘 뭐 먹지?</title>
+    <style>
+     
+    </style>
+  
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="./work.js"></script>
+  </head>
+  
+  <body>
+    
+
+    <input type="checkbox" id="menuicon">
+    <label for="menuicon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <div class="sidebar">
+      <br><br>
+      <a href="login.html" class="login-btn">
+        <h3>로그인</h3>
+      </a>
+
+  <a href="post.html" target="_blank" class="board-link">
+    <h3>게시판</h3>
+   </a>
+  <a href="random.html" target="_blank" class="random">
+    <h3>돌려돌려</h3>
+  </a>
+    </div>
+  <h1 class="d">오늘 뭐 먹지?</h1>
+  <br>
+  <p>내 위치</p><br>
+
+  <div class="tab_content">
+    <input type="radio" name="tabmenu" id="tab01">
+    <label for="tab01">중식</label>
+    <input type="radio" name="tabmenu" id="tab02">
+    <label for="tab02">양식</label>
+    <input type="radio" name="tabmenu" id="tab03">
+    <label for="tab03">일식</label>
+    <input type="radio" name="tabmenu" id="tab04">
+    <label for="tab04">한식</label>
+    <input type="radio" name="tabmenu" id="tab05">
+    <label for="tab05">패스트 푸드</label>
+    <!--여기 중식 박스 아래에다가 div를 하나로 묶어서 Segmantic Tag를 하나 만들ㅇㅓ서 그 다음ㅇㅔ 하던 거 마무리 하시면 되ㅂ니다.
+      여기에 margin만 두면 얼추 완성 그리고 br은 각끔적 쓰지 ㅁㅏ세요.
+    
+    -->
+    
+      <div class="conbox con1 1">
+        <img class="ching"  width="350" height="190" src="./Thingtao.jfif" alt="중식 메뉴 1 이미지"> 
+        <div class="restaurant-info">
+          <h2>칭타오</h2>
+          <span>063-1234-1234</span>
+        </div> 
+        <h3>&#9660; 전라북도 군산시 미제길 41 1층 칭타오</h3>
+        <br>
+        <h3>&#9684; 영업시간 평일 10:40-20:10(목요일 정기 휴무)</h3>
+        <br>
+        <h3>&#x1F37D; 짜장면, 짬뽕, 탕수육,볶음밥 등</h3>
+      </div>
+     
+      <div class="conbox con1 2">
+        <img class="ching" width="350" height="190" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA5MjNfMjcz%2FMDAxNjk1NDYwMjUyNzcz.rBSIzP1ZFfIBgxHkBnN0t_sCEsyDxIAdvWcQlnp8jTQg.pcRgw-HwQ_ZnB8KjIpwPi4H8HYLgJcz_Omg-pcsdrNkg.JPEG.posoonyi%2F20230921_192532.jpg" alt="중식 메뉴 2 이미지"> 
+        <div class="restaurant-info"> 
+        <h2>사천성</h2>
+          <span>063-461-3351</span>
+        </div> 
+        <h3>&#9660; 전북 군산시 황룡2길 4-3 트인들</h3>
+        <br>
+        <h3>&#9684; 10:30-20:30(15:30-16:30 브레이크타임)(매주 일요일 휴무)</h3>
+        <br>
+        <h3>&#x1F37D; 짜장면, 짬뽕, 탕수육</h3>
+      </div>
+     
+      <div class="conbox con1 3">
+        <img class="ching" width="350" height="190" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODEyMjBfMTYw%2FMDAxNTQ1MjcwNjk2MDAw.cDANub_E-q0WYUYxy4vO16G7u4-vUOyFevq2GM6kVOAg.kclHSrnzSTdccXm8rHcnRfFP1KQmSEiPNiPvMV2FSTcg.JPEG.asiato821%2F20181217_124102.jpg&type=sc960_832" alt="중식 메뉴 1 이미지"> 
+        <div class="restaurant-info">
+          <h2>동네중국집</h2>
+          <span>0507-1327-9479</span>
+        </div> 
+        <h3>&#9660; 전북 군산시 대학로 531 1층</h3>
+        <br>
+        <h3>&#9684; 일 11:00-15:00 13:30 라스트오더 월-토11:00-23:00(15:00-17:00브레이크 타임)</h3>
+        <br>
+        <h3>&#x1F37D; 짜장면, 군산짬뽕, 볶음밥</h3>
+      </div>
+      
+      <div class="conbox con1 4">
+        <img class="ching" width="300" height="190" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODEyMjBfMTYw%2FMDAxNTQ1MjcwNjk2MDAw.cDANub_E-q0WYUYxy4vO16G7u4-vUOyFevq2GM6kVOAg.kclHSrnzSTdccXm8rHcnRfFP1KQmSEiPNiPvMV2FSTcg.JPEG.asiato821%2F20181217_124102.jpg&type=sc960_832" alt="중식 메뉴 1 이미지"> 
+        <div class="restaurant-info">
+          <h2>중화요리 황룡</h2>
+          <span>063-468-5651</span>
+        </div> 
+        <h3>&#9660; 전북 군산시 미제길 35-1</h3>
+        <br>
+        <h3>&#9684; 일 11:00-15:00 13:30 라스트오더 월-토11:00-23:00(15:00-17:00브레이크 타임)</h3>
+        <br>
+        <h3>&#x1F37D; 짜장면, 짬뽕, 탕수육</h3>
+      </div>
+     
+      <div class="conbox con1 5">
+        <img class="ching" width="300" height="190" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODEyMjBfMTYw%2FMDAxNTQ1MjcwNjk2MDAw.cDANub_E-q0WYUYxy4vO16G7u4-vUOyFevq2GM6kVOAg.kclHSrnzSTdccXm8rHcnRfFP1KQmSEiPNiPvMV2FSTcg.JPEG.asiato821%2F20181217_124102.jpg&type=sc960_832" alt="중식 메뉴 1 이미지"> 
+        <div class="restaurant-info">
+          <h2>야미마라탕</h2>
+          <span>063-462-0130</span>
+        </div> 
+        <h3>&#9660; 전북 군산시 미제1길 11 1층</h3>
+        <br>
+        <h3>&#9684; 11:00-21:00(매주 일요일 휴무)</h3>
+        <br>
+        <h3>&#x1F37D; 마라탕, 아마샹궈, 꿔바로우</h3>
+      </div>
+     
+      <div class="conbox con1 6">
+        <img class="ching" width="300" height="190" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODEyMjBfMTYw%2FMDAxNTQ1MjcwNjk2MDAw.cDANub_E-q0WYUYxy4vO16G7u4-vUOyFevq2GM6kVOAg.kclHSrnzSTdccXm8rHcnRfFP1KQmSEiPNiPvMV2FSTcg.JPEG.asiato821%2F20181217_124102.jpg&type=sc960_832" alt="중식 메뉴 1 이미지"> 
+        <div class="restaurant-info">
+          <h2>취향각</h2>
+          <span>063-471-6800</span>
+        </div> 
+        <h3>&#9660; 전북 군산시 미룡로 15</h3>
+        <br>
+        <h3>&#9684; 11:00-21:00(매주 일요일 휴무)</h3>
+        <br>
+        <h3>&#x1F37D;  짜장면, 짬뽕, 탕수육</h3>
+      </div>
+    
+      <div class="conbox con1 7">
+        <img class="ching" width="350" height="190" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODEyMjBfMTYw%2FMDAxNTQ1MjcwNjk2MDAw.cDANub_E-q0WYUYxy4vO16G7u4-vUOyFevq2GM6kVOAg.kclHSrnzSTdccXm8rHcnRfFP1KQmSEiPNiPvMV2FSTcg.JPEG.asiato821%2F20181217_124102.jpg&type=sc960_832" alt="중식 메뉴 1 이미지"> 
+        <div class="restaurant-info">
+          <h2>탕화쿵푸 </h2>
+          <span>0507-1378-6613</span>
+        </div> 
+        <h3>&#9660; 전북 군산시 대학로 529 103호</h3>
+        <br>
+        <h3>&#9684; 11:00-21:30(매주 토요일 휴무)</h3>
+        <br>
+        <h3>&#x1F37D; 마라탕, 아마샹궈, 꿔바로우</h3>
+      </div>
+     
+      <div class="conbox con1 8">
+        <img class="ching" width="350" height="190" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODEyMjBfMTYw%2FMDAxNTQ1MjcwNjk2MDAw.cDANub_E-q0WYUYxy4vO16G7u4-vUOyFevq2GM6kVOAg.kclHSrnzSTdccXm8rHcnRfFP1KQmSEiPNiPvMV2FSTcg.JPEG.asiato821%2F20181217_124102.jpg&type=sc960_832" alt="중식 메뉴 1 이미지"> 
+        <div class="restaurant-info">
+          <h2>우낀짬뽕</h2>
+          <span>063-463-5551</span>
+        </div> 
+        <h3>&#9660; 전북 군산시 황룡1길 17 사랑원룸</h3>
+        <br>
+        <h3>&#9684; 월-금 10:30-20:00 , 토 10:30-15:00(매주 일요일 휴무)</h3>
+        <br>
+        <h3>&#x1F37D; 우낀짬뽕, 눈물짬뽕, 탕수육</h3>
+      </div>
+
+
+    <div class="conbox con2 1">
+      <img class="ching" width="350" height="190" src="https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMzA2MDVfODIg%2FMDAxNjg1OTcxNzM2MzU4.PLd1yaRPKFnh6EYxemptparKNOEgW-dh66ORIiA96dMg.FS9rGJf6bjVT-eE1Ajr6EVmps-qtFmDYViWfCBwEFt8g.JPEG%2FMYXJ_20230522184328238_fast.jpg" alt="중식 메뉴 1 이미지"> 
+      <div class="restaurant-info">
+        <h2>디지스</h2>
+        <span>0507-1356-0635</span>
+      </div> 
+      <h3>&#9660; 전북 군산시 미제1길 7</h3>
+      <br>
+      <h3>&#9684; 11:00-21:00(14:00-16:00 브레이크 타임)(금요일 휴무)</h3>
+      <br>
+      <h3>&#x1F37D; 라구 토마토 파스타, 베이컨 크림 파스타</h3>
+    </div>
+    <div class="conbox con2 2">
+      <img class="ching" width="300" height="190" src="https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230508_278%2F1683532773755dHdHx_JPEG%2F02.jpg" alt="중식 메뉴 1 이미지"> 
+      <div class="restaurant-info">
+        <h2>라라코스트</h2>
+        <span>0507-1489-3230</span>
+      </div> 
+      <h3>&#9660;전북 군산시 황룡로 10 2층</h3>
+      <br>
+      <h3>&#9684; 11:00-21:30(15:00-17:00 브레이크 타임)</h3>
+      <br>
+      <h3>&#x1F37D; 파스타, 스테이크, 필라프</h3>
+    </div>
+    <div class="conbox con2 3">
+      <img class="ching" width="350" height="190" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzEwMDlfMzIg%2FMDAxNjk2ODU2NzMwODg3.vebmr6JhXdjKy3Qs3GWoShfFOzcUkiwYDb_CXVm5H8sg.545yeaZ6ri1HDaV_7b-Rq-lZlJ5_DVzxeEl6M9Yvumwg.JPEG.sarang_2_42%2Foutput_3277859508.jpg" alt="중식 메뉴 1 이미지"> 
+      <div class="restaurant-info">
+        <h2>파스토</h2>
+        <span>063-464-6202</span>
+      </div> 
+      <h3>&#9660; 전북 군산시 황룡안길 50</h3>
+      <br>
+      <h3>&#9684; 11:00-21:00(매주 일요일 휴무)</h3>
+      <br>
+      <h3>&#x1F37D; 매운낙지 도리아, 치킨 도리아, 까르보나라</h3>
+    </div>
+   
+    <div class="conbox con3">
+      <h2>일식 메뉴 1</h2>
+      <p>초밥, 덮밥, 라면</p>
+    </div>
+    <div class="conbox con3">
+      <h2>일식 메뉴 2</h2>
+      <p>돈까스, 소바, 우동</p>
+    </div>
+
+    <div class="conbox con4">
+      <h2>한식 메뉴 1</h2>
+      <p>비빔밥, 불고기, 김치찌개</p>
+    </div>
+    <div class="conbox con4">
+      <h2>한식 메뉴 2</h2>
+      <p>갈비탕, 떡볶이, 삼겹살</p>
+    </div>
+
+    <div class="conbox con5">
+      <h2>패스트 푸드 메뉴 1</h2>
+      <p>햄버거, 피자, 감자튀김</p>
+    </div>
+    <div class="conbox con5">
+      <h2>패스트 푸드 메뉴 2</h2>
+      <p>치즈버거, 핫도그, 치킨 너겟</p>
+    </div>
+
+   
+  
+
+</body>
+
+</html>

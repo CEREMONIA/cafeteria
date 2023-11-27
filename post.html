@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./post.css">
+  <title>게시판</title>
+  <script>
+    function goToBoard() {
+      window.location.href = "board.html";
+    }
+  </script>
+</head>
+<body>
+
+  <div id="board">
+    <div class="post">
+      <h2>첫 번째 게시물 제목</h2>
+      <p>게시물 내용이 여기에 들어갑니다.</p>
+      <small>작성자: John Doe | 날짜: 2023-01-01</small>
+    </div>
+
+    <div class="post">
+      <h2>두 번째 게시물 제목</h2>
+      <p>두 번째 게시물의 내용이 여기에 들어갑니다.</p>
+      <small>작성자: Jane Doe | 날짜: 2023-01-02</small>
+    </div>
+  </div>
+
+  <div class="form-container">
+    <h2>게시물 작성</h2>
+    <form id="postForm">
+      <label for="title">제목:</label>
+      <input type="text" id="title" name="title" required>
+
+      <label for="content">내용:</label>
+      <textarea id="content" name="content" rows="4" required></textarea>
+
+      <button type="submit">게시물 작성</button>
+    </form>
+  </div>
+
+  <!-- "게시판" 버튼 -->
+  <button onclick="goToBoard()">게시판으로 이동</button>
+
+</body>
+</html>

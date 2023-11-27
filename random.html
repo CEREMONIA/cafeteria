@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>음식 메뉴 선택기</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            width:700px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        button {
+            font-size: 14px;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        .menu-input {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* 수직 가운데 정렬 */
+        }
+
+        .menu-label {
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        .menu-icon {
+            margin-right: 5px;
+            color: #155223; /* Bootstrap success color */
+        }
+.d{
+  text-align: center;
+  background-color: #180078;
+  color: rgb(206, 205, 205);
+  margin: 0;
+  padding: 5px;
+  width: 300px; /* 원하는 너비로 조절 */
+  margin: 0 auto; /* 가운데 정렬을 위해 추가 */
+  border-radius: 60px; /* 선택적으로 더 둥근 테두리 설정 */
+
+}
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="d">음식 메뉴 선택</h2>
+        <br>
+        <div id="menuInputs">
+        </div>
+
+        <button class="btn btn-primary" onclick="addMenuInput()"><i class="fas fa-plus menu-icon"></i> 메뉴 추가</button>
+        <button class="btn btn-success" onclick="selectRandomMenu()"><i class="fas fa-dice menu-icon"></i> 랜덤으로 메뉴 선택하기</button>
+        
+        <div id="result">
+            <h3>선택된 메뉴:</h3>
+            <p id="selectedMenu"></p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+    
+    <script>
+        function addMenuInput() {
+            var menuInputs = document.getElementById("menuInputs");
+
+            // 새로운 입력 필드를 생성하여 추가
+            var newInput = document.createElement("div");
+            newInput.className = "menu-input";
+            newInput.innerHTML = '<div class="menu-label"><i class="fas fa-utensils"></i></div>' +
+                                '<input type="text" class="form-control menu" placeholder="메뉴 입력" oninput="adjustInputSize(this)"style="width: 100px;">';
+            menuInputs.appendChild(newInput);
+        }
+
+        function adjustInputSize(input) {
+            input.style.width = ((input.value.length + 2) * 16) + 'px'; // 간단한 계산으로 크기 조절
+        }
+
+        function selectRandomMenu() {
+            // 모든 메뉴 입력 필드를 가져와 배열에 저장
+            var menuInputs = document.getElementsByClassName("menu");
+            var menus = Array.from(menuInputs).map(input => input.value.trim());
+
+            // 메뉴가 하나 이상 입력되어 있는지 확인
+            if (menus.some(menu => menu !== '')) {
+                // 배열에서 무작위로 하나의 메뉴 선택
+                var selectedMenu = menus[Math.floor(Math.random() * menus.length)];
+
+                // 결과를 HTML에 표시
+                document.getElementById("selectedMenu").innerHTML = selectedMenu;
+            } else {
+                alert("적어도 하나 이상의 메뉴를 입력하세요.");
+            }
+        }
+    </script>
+
+</body>
+</html>
+
